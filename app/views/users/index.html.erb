@@ -4,7 +4,9 @@
       <h1><small>Task投稿</small></h1>
       <%= form_for(@task) do |f| %>
         <div class="form-group">
+          <%= f.label :content, "タスク" %>
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
+          <%= f.label :status, 'ステータス' %>
           <%= f.text_area :status, class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
